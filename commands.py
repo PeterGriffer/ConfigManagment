@@ -1,3 +1,8 @@
+import time
+import platform
+import datetime
+import sys
+
 class Command:
     def __init__(self, name, description):
         self.name = name
@@ -32,3 +37,28 @@ class ExitCommand(Command):
     def execute(self, args, vfs):
         print("Goodbye!")
         return False
+
+class ConfDumpCommand(Command):
+    def __init__(self):
+        super().__init__(name="conf-dump", description="inside information for developer")
+    def execute(self, args, vfs):
+         print("╔══════════════════════════════════════╗")
+         print("║           ТЕКУЩИЕ ПАРАМЕТРЫ          ║")
+         print("╠══════════════════════════════════════╣")
+         print("Файловая система - ", vfs.name)
+         if hasattr(vfs,"console"):
+             
+             print(f"Версия Python: {sys.version.split()[0]}")
+             print(f"Платформа: {platform.platform()}")
+             print(f"Текущее время: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}") 
+             print("Время работы - ", vfs.console.get_uptime())
+             print("Состояние консоли - ","Работает" if vfs.console.running else "Не работает")
+             print("Количество комманд - ",len(vfs.console.commands))
+             print("Количество обращений к консоли - ", vfs.console.countercom)
+            
+            
+
+         print("╔══════════════════════════════════════╗")
+         print("║                                      ║")
+         print("╠══════════════════════════════════════╣")
+         return True

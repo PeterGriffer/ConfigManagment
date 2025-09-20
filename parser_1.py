@@ -1,7 +1,5 @@
 class Parser:
     def parse(self, input_string):
-        # Простой парсер - разбиваем по пробелам
-       
 
         parts = []
         current = []
@@ -9,7 +7,7 @@ class Parser:
         quote_char = None
 
         for char in input_string.strip():
-            if char in ['"', "'"]:
+            if char in ["\'", "\""]:
                 if not in_quotes:
                     in_quotes = True
                     quote_char = char
@@ -30,9 +28,7 @@ class Parser:
 
      
       
-                
             
-
         if not parts:
             return None, []
         return parts[0], parts[1:]
