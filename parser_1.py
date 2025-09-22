@@ -5,7 +5,7 @@ class Parser:
         current = []
         in_quotes = False
         quote_char = None
-
+#
         for char in input_string.strip():
             if char in ["\'", "\""]:
                 if not in_quotes:

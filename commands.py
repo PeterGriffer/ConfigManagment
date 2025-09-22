@@ -10,7 +10,7 @@ class Command:
         
     def execute(self, args, vfs):
         pass
-
+#
 class LcCommand(Command):
     def __init__(self):
         super().__init__(name="lc", description="List contents")
