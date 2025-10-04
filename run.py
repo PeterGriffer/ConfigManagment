@@ -1,9 +1,5 @@
-from console import *
+from console import Console
 
-
-# Запуск консоли
 if __name__ == "__main__":
     console = Console()
     console.run()
-    console.countercom=0
-    #

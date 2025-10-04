@@ -1,11 +1,10 @@
 class Parser:
     def parse(self, input_string):
-
         parts = []
         current = []
         in_quotes = False
         quote_char = None
-#
+
         for char in input_string.strip():
             if char in ["\'", "\""]:
                 if not in_quotes:
@@ -26,9 +25,6 @@ class Parser:
         if current:
             parts.append(''.join(current))
 
-     
-      
-            
         if not parts:
             return None, []
         return parts[0], parts[1:]
