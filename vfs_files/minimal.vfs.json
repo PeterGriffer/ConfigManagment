@@ -1,0 +1,29 @@
+{
+    "name": "Минимальная VFS",
+    "description": "Минимальная файловая система для тестирования",
+    "structure": [
+        {
+            "name": "home",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "user",
+                    "type": "directory", 
+                    "children": [
+                        {
+                            "name": "readme.txt",
+                            "type": "file",
+                            "content": "Добро пожаловать в Minimal VFS!\nЭто тестовый файл.",
+                            "size": 85
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "temp",
+            "type": "directory",
+            "children": []
+        }
+    ]
+}

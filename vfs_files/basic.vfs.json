@@ -1,0 +1,72 @@
+{
+    "name": "Базовая VFS",
+    "description": "Базовая файловая система с несколькими уровнями",
+    "structure": [
+        {
+            "name": "bin",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "app.exe",
+                    "type": "file", 
+                    "content": "Mock executable file",
+                    "size": 1024
+                }
+            ]
+        },
+        {
+            "name": "home",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "user",
+                    "type": "directory",
+                    "children": [
+                        {
+                            "name": "documents",
+                            "type": "directory",
+                            "children": [
+                                {
+                                    "name": "project1",
+                                    "type": "directory", 
+                                    "children": [
+                                        {
+                                            "name": "main.py",
+                                            "type": "file",
+                                            "content": "print('Hello VFS!')\n# Python script example",
+                                            "size": 45
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "config.txt",
+                            "type": "file",
+                            "content": "user_preferences:\n- theme: dark\n- language: ru",
+                            "size": 56
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "var",
+            "type": "directory", 
+            "children": [
+                {
+                    "name": "log",
+                    "type": "directory",
+                    "children": [
+                        {
+                            "name": "system.log",
+                            "type": "file",
+                            "content": "2024-01-01 10:00:00 INFO: System started\n2024-01-01 10:01:00 INFO: VFS mounted",
+                            "size": 98
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
