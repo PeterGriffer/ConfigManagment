@@ -1,0 +1,45 @@
+{
+    "name": "Демонстрация Base64",
+    "description": "VFS для демонстрации работы с base64 кодированием",
+    "structure": [
+        {
+            "name": "text_files",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "ordinary.txt",
+                    "type": "file",
+                    "content": "Это обычный текстовый файл\nВторая строка",
+                    "size": 45
+                },
+                {
+                    "name": "base64_encoded.txt",
+                    "type": "file",
+                    "encoding": "base64",
+                    "content": "0J7RgtC/0YDQsNCy0LvQtdC90L4g0YEgYmFzZTY0IQo0JLQtdC00L7QvCDRgdGC0YDQvtC60LA=",
+                    "size": 60
+                }
+            ]
+        },
+        {
+            "name": "binary_data",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "english.bin",
+                    "type": "file",
+                    "encoding": "base64",
+                    "content": "SGVsbG8gVkZTISBUaGlzIGlzIGJpbmFyeSBkYXRhLg==",
+                    "size": 32
+                },
+                {
+                    "name": "russian.bin",
+                    "type": "file",
+                    "encoding": "base64",
+                    "content": "0J/RgNC40LLQtdGCINC+0YIg0LIg0YHQstGP0LfRjCDQv9GA0L7RgdC80L7RgtGA0YM=",
+                    "size": 56
+                }
+            ]
+        }
+    ]
+}
