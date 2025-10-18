@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Эмулятор командной строки с виртуальной файловой системой в памяти. Загружает структуру файлов из JSON, поддерживает базовые UNIX-команды и выполнение скриптов.
 
 Навигация: ls, cd, pwd
@@ -6,31 +5,36 @@
 Система: who, time, echo, help, conf-dump
 Управление: load-vfs, run, exit
 
-Формат VFS: JSON файлы с поддержкой base64 для бинарных данных.
+Формат VFS: JSON файлы с поддерж
+кой base64 для бинарных данных.
 
 Установка не требуется - чистый Python
 
 Запуск интерактивного режима
+```
 python main.py
-
+```
 Запуск с VFS
+```
 python main.py --vfs basic.vfs.json
-
+```
 Запуск скрипта
+```
 python main.py --script demo.bat
-
+```
 Показать справку
+```
 python main.py --help
-
+```
 Список доступных VFS
+```
 python main.py --list-vfs
-
+```
 Пример вывода в пц интерактивном режиме
+```bash
 [VFS:БазоваяVFS /]$ ls
 [VFS:БазоваяVFS /]$ cd /home/user
 [VFS:БазоваяVFS /home/user]$ cat readme.txt
 [VFS:БазоваяVFS /home/user]$ touch newfile.txt
 [VFS:БазоваяVFS /home/user]$ who
-=======
-Готовые три этапа конфигурационного управления, консоль, тестовый скрипт , запускаем через терминал как обычно
->>>>>>> 99aa92771d32883ffba9adb15c3a9fce59da0a20
+```
